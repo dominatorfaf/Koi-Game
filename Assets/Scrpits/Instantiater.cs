@@ -6,7 +6,7 @@ public class Instantiater : MonoBehaviour
 {   
     public GameObject cellTemplate;
 
-    float generationInterval = 0.7f;
+    float generationInterval = 0.08f;
 
     int[ , ] cellsArray;
 
@@ -25,8 +25,8 @@ public class Instantiater : MonoBehaviour
         print("Cell size: " + cellSize);
         
         // fill random alive cells
-        for (int i = 0; i < 80; i++){
-            cellsArray[Random.Range(1, 14), Random.Range(3, 27)] = 1; 
+        for (int i = 0; i < 2200; i++){
+            cellsArray[Random.Range(1, gridHeight-2), Random.Range(3, gridWidth-4)] = 1; 
         }
 
         InvokeRepeating("NewGenerationUpdate", generationInterval, generationInterval);
