@@ -25,7 +25,7 @@ public class Instantiater : MonoBehaviour
         print("Cell size: " + cellSize);
         
         // fill random alive cells
-        for (int i = 0; i < 2200; i++){
+        for (int i = 0; i < 1000; i++){
             cellsArray[Random.Range(1, gridHeight-2), Random.Range(3, gridWidth-4)] = 1; 
         }
 
@@ -89,6 +89,10 @@ public class Instantiater : MonoBehaviour
         }
 
         return result;
+    }
+
+    public int getGridWidth(){
+        return gridWidth;
     }
 
 }
